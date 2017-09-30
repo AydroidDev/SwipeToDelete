@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SwipeRecyclerView</string>
+
+    <string name="zagueiro">Zagueiro</string>
+    <string name="atacante">Atacante</string>
+    <string name="meiaArmador">Meia-Armador</string>
+</resources>
