@@ -35,6 +35,22 @@ ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeToDismiss);
 itemTouchHelper.attachToRecyclerView(recyclerView);
 ```
 
+```java
+private SwipeToDismiss.SwipetoDismissCallBack getCallback(final ListPlayerAdapter adapter){
+    return new SwipeToDismiss.SwipetoDismissCallBack() {
+         @Override
+         public void onSwipedLeft(RecyclerView.ViewHolder viewHolder) {
+            adapter.remove(viewHolder.getAdapterPosition());
+        }
+
+        @Override
+        public void onSwipedRight(RecyclerView.ViewHolder viewHolder) {
+            adapter.remove(viewHolder.getAdapterPosition());
+        }
+    };
+}
+```
+
 ### Callback
 ```java
 public interface SwipetoDismissCallBack {
