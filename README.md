@@ -1,6 +1,6 @@
 # SwipeToDelete
 
-![](https://gifyu.com/images/2017_09_30_21_34_14_1_.gif)
+[![2017_09_30_21_34_14_1_.gif](https://gifyu.com/images/2017_09_30_21_34_14_1_.gif)](https://gifyu.com/image/M71l)
 
 ## Quickstart
 This project is a implementation of Swipe to Dismiss feature.
