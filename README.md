@@ -6,6 +6,7 @@
 This project is a implementation of Swipe to Dismiss feature.
 
 ### Example
+#### Constructor and attributes
 ``` java
 SwipeToDismiss swipeToDismiss = new SwipeToDismiss(getContext(), ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
 swipeToDismiss.setLeftBackgroundColor(R.color.colorAccent);
@@ -14,7 +15,23 @@ swipeToDismiss.setLeftImg(R.drawable.ic_adb);
 swipeToDismiss.setRightImg(R.drawable.ic_adb);
 swipeToDismiss.setSwipetoDismissCallBack(getCallback(myAdapter));
 ```
+#### Callback implementation
+```java
+private SwipeToDismiss.SwipetoDismissCallBack getCallback(final MyAdapter adapter){
+    return new SwipeToDismiss.SwipetoDismissCallBack() {
+         @Override
+         public void onSwipedLeft(RecyclerView.ViewHolder viewHolder) {
+            adapter.remove(viewHolder.getAdapterPosition());
+        }
 
+        @Override
+        public void onSwipedRight(RecyclerView.ViewHolder viewHolder) {
+            adapter.remove(viewHolder.getAdapterPosition());
+        }
+    };
+}
+```
+#### Full example
 ``` java
 RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 final List<SomeClass> list = getList();
@@ -42,22 +59,6 @@ swipeToDismiss.setSwipetoDismissCallBack(getCallback(myAdapter));
 
 ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeToDismiss);
 itemTouchHelper.attachToRecyclerView(recyclerView);
-```
-
-```java
-private SwipeToDismiss.SwipetoDismissCallBack getCallback(final ListPlayerAdapter adapter){
-    return new SwipeToDismiss.SwipetoDismissCallBack() {
-         @Override
-         public void onSwipedLeft(RecyclerView.ViewHolder viewHolder) {
-            adapter.remove(viewHolder.getAdapterPosition());
-        }
-
-        @Override
-        public void onSwipedRight(RecyclerView.ViewHolder viewHolder) {
-            adapter.remove(viewHolder.getAdapterPosition());
-        }
-    };
-}
 ```
 
 ### Callback
