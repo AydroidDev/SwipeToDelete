@@ -1,6 +1,8 @@
 # SwipeToDelete
 
-<img src="https://i.imgur.com/RRpMxgt.gif" width="300"/>
+<p align="start">
+  <img src="http://i.imgur.com/LvUCd3w.gif" width="300"/>
+</p>
 
 ## Quickstart
 This project is a implementation of Swipe to Dismiss feature.
