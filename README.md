@@ -1,7 +1,7 @@
 # SwipeToDelete
 
 <p align="start">
-  <img src="http://i.imgur.com/LvUCd3w.gif" width="300"/>
+  <img src="https://i.imgur.com/RRpMxgt.gif" width="300"/>
 </p>
 
 ## Quickstart
