@@ -7,6 +7,15 @@ This project is a implementation of Swipe to Dismiss feature.
 
 ### Example
 ``` java
+SwipeToDismiss swipeToDismiss = new SwipeToDismiss(getContext(), ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
+swipeToDismiss.setLeftBackgroundColor(R.color.colorAccent);
+swipeToDismiss.setRightBackgroundColor(R.color.colorPrimary);
+swipeToDismiss.setLeftImg(R.drawable.ic_adb);
+swipeToDismiss.setRightImg(R.drawable.ic_adb);
+swipeToDismiss.setSwipetoDismissCallBack(getCallback(myAdapter));
+```
+
+``` java
 RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 final List<SomeClass> list = getList();
 MyAdapter myAdapter = new MyAdapter(list, getContext());
